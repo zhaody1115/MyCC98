@@ -115,7 +115,6 @@ public class HomeActivity extends RoboSherlockFragmentActivity implements
 		actionBar.setDisplayShowTitleEnabled(false);
 		actionBar.setDisplayUseLogoEnabled(false);
 		actionBar.setDisplayShowHomeEnabled(false);
-
 	}
 
 	@Override
