@@ -29,6 +29,7 @@ import android.preference.PreferenceManager;
 import android.support.v4.view.ViewPager;
 import android.util.Log;
 import android.view.KeyEvent;
+import android.widget.ArrayAdapter;
 import android.widget.Toast;
 import ch.boye.httpclientandroidlib.HttpResponse;
 import ch.boye.httpclientandroidlib.client.methods.HttpGet;
@@ -108,7 +109,9 @@ public class HomeActivity extends RoboSherlockFragmentActivity implements
 		HomeActionListAdapter list = new HomeActionListAdapter(this,
 				service.getUserName(), service.getUserAvatar());
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_LIST);
-		actionBar.setListNavigationCallbacks(list, this);
+		String[] content = {service.getUserName()+"的定制区","设置","个人信息","反馈","关于","重新登录"};
+		ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,android.R.layout.simple_list_item_1 ,content);
+		actionBar.setListNavigationCallbacks(adapter, this);
 		actionBar.setDisplayShowTitleEnabled(false);
 		actionBar.setDisplayUseLogoEnabled(false);
 		actionBar.setDisplayShowHomeEnabled(false);
