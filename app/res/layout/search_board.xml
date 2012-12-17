@@ -57,8 +57,7 @@
 
     <ListView
         android:id="@+id/search_board_result_list"
-        style="@style/listview"
-        android:layout_width="fill_parent"
+         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:visibility="gone" />
 
